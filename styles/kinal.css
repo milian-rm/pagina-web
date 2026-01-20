@@ -271,5 +271,104 @@ body {
     transform: scale(1.05);
 }
 
+.contenedor-rejilla-dos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;                    
+    padding: 20px;
+    max-width: 1200px;            
+    margin: 0 auto;                
+}
+
+.tarjeta {
+    border-radius: 12px;
+    overflow: hidden;     
+    display: flex;
+    flex-direction: column;    
+    transition: transform 0.3s ease;
+}
+
+.tarjeta.avisos{
+    background-color: white;      
+    border: 2px solid #23376d;
+}
+
+.tarjeta:hover.avisos {
+    transform: translateY(-5px);  
+    border-color: #eb7207;        
+}
+
+.imagen-tarjeta img {
+    width: 100%;
+    height: 330px;                
+    object-fit: cover;         
+}
+
+.texto-tarjeta {
+    padding: 20px;
+}
+
+.texto-tarjeta h2 {
+    font-size: 1.4rem;
+    margin-top: 0;
+}
+
+.contenedor-rejilla-tres {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-datos {
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tarjeta-datos.tecnica { background-color: #e0b814; }
+.tarjeta-datos.basicos { background-color: #89224f; }
+.tarjeta-datos.diversificado { background-color: #23376d; }
+.tarjeta-datos.total { background-color: #eb7207; }
+
+.tarjeta-datos.tecnica { transform: translateY(20px); }
+.tarjeta-datos.basicos { transform: translateY(60px); }
+.tarjeta-datos.diversificado { transform: translateY(40px); }
+.tarjeta-datos.total { transform: translateY(0); }
+
+.tarjeta-datos:hover {
+    transform: scale(1.07) translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+}
+
+.texto-tarjeta-datos.blanco {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.texto-tarjeta-datos.blanco h2 {
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.texto-tarjeta-datos.blanco p {
+    margin-top: 8px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+
 
 
