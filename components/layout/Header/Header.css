@@ -1,132 +1,76 @@
-body {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.5;
-    overflow-x: hidden;
+header {
+    width: 100%;
 }
 
-header {
+header.simple {
     text-align: center;
     padding: 40px 0;
     border-bottom: 1px solid #333;
 }
 
-div {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-section {
-    margin-top: 30px;
-    padding-bottom: 10px;
-}
-
-h2 {
-    color: #cccccc;
-    border-bottom: 1px solid #444;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-p {
-    color: #bbbbbb;
-    margin: 10px 0;
-}
-
-ul li {
-    display: flex;        
-    align-items: center;  
-    gap: 20px;          
-    margin-bottom: 30px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 20px;
-}
-
-ul li p {
-    flex: 1;              
-    margin: 0;
-}
-
-ul li img {
-    width: 150px;          
-    height: 150px;        
-    object-fit: cover;   
-    border-radius: 8px;
-    margin: 0;
-}            
-
-.tarjeta-fondo {
-    width: 96%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/sm.jpg);
-    background-size: cover;      
-    background-position: center;  
-    border-radius: 12px;
-    padding: 40px;               
-    color: white;                
-    min-height: 300px;           
-    display: flex;
-    align-items: center;          
-}
-
-.contenido {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 8px;
-    backdrop-filter: blur(5px);    
-    max-width: 1000px;
-}
-
-
-
-
-
-.contenedor-rejilla {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 20px;                    
-    padding: 20px;
-    max-width: 1200px;            
-    margin: 0 auto;              
-}
-
-.contenedor-rejilla-dos {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px;                    
-    padding: 20px;
-    max-width: 1200px;            
-    margin: 0 auto;                
-}
-
-.tarjeta {
-    background-color: #222;      
-    border-radius: 12px;
-    overflow: hidden;           
-    border: 1px solid #333;
-    display: flex;
-    flex-direction: column;    
-    transition: transform 0.3s ease;
-}
-
-.tarjeta:hover {
-    transform: translateY(-5px);  
-    border-color: #E82A1C;        
-}
-
-.imagen-tarjeta img {
+.header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 200px;                
-    object-fit: cover;         
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    background-color: #23376d;
+    padding: 15px 40px;
+    z-index: 1000;
 }
 
-.texto-tarjeta {
-    padding: 20px;
+.logo,
+.bi {
+    flex: 1;
 }
 
-.texto-tarjeta h2 {
-    font-size: 1.4rem;
-    margin-top: 0;
+.logo {
+    text-align: left;
+}
+
+.bi {
+    text-align: right;
+}
+
+.logo img,
+.bi img {
+    width: 100px;
+}
+
+.nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    white-space: nowrap;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #eb7207;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover {
+    color: #eb7207;
+}
+
+.nav a:hover::after {
+    width: 100%;
 }
