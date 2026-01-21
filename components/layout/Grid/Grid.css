@@ -1,4 +1,3 @@
-/* CONTENEDORES */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -9,7 +8,6 @@
     margin: 0 auto;
 }
 
-/* GRID 2 COLUMNAS */
 .contenedor-rejilla-dos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,7 +15,6 @@
     padding: 20px;
 }
 
-/* GRID 3 COLUMNAS */
 .contenedor-rejilla {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -25,7 +22,6 @@
     padding: 20px;
 }
 
-/* TARJETA BASE */
 .tarjeta {
     background-color: #222;
     border-radius: 12px;
@@ -43,14 +39,12 @@
     border-color: #E82A1C;
 }
 
-/* IMAGEN TARJETA */
 .imagen-tarjeta img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* TEXTO TARJETA */
 .texto-tarjeta {
     padding: 20px;
 }

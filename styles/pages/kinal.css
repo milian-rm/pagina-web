@@ -354,9 +354,22 @@ body {
     background-color: rgba(255, 255, 255, 0.14);
 }
 
+@media (max-width: 1100px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 20px;
+    }
 
+    .nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-
-
-
+    .logo,
+    .bi {
+        flex: 0 0 auto;
+    }
+}
 
